@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculadora de gasto metabólico</title>
+		<link
+			rel="shortcut icon"
+			href="/img/icons8-barra-de-peso-64.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="src/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cuprum:ital@1&family=Kufam:wght@600;800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="box-info">
+					<!-- <div class="titulo">
+						<h1>Calculo Gasto Metabolico</h1>
+					</div> -->
+
+					<div class="info-input">
+						<label class="sexo">Sexo:</label>
+						<select id="sexo">
+							<option value="feminino">Feminino</option>
+							<option value="masculino">Masculino</option>
+						</select>
+						<br />
+
+						<label>Peso (em kg):</label>
+
+						<input type="number" id="peso" />
+						<br />
+
+						<label>Altura (em cm):</label>
+						<input type="number" id="altura" />
+						<br />
+
+						<label>Idade (em anos):</label>
+						<input type="number" id="idade" />
+						<br />
+
+						<label>Fator de atividade:</label>
+						<input type="number" id="fatorAtividade" />
+						<br />
+
+						<button onclick="calculaGastoMetabolico()">
+							Calcular gasto metabólico
+						</button>
+						<br />
+					</div>
+				</div>
+
+				<div class="box-resultado">
+					<div id="resultado" class="resultado">
+						<h2 id="titulo-resultado"></h2>
+						<p id="resultado-kcal"></p>
+
+						<div id="nota" class="nota">
+							<p>Nota:</p>
+							<ul>
+								<li>
+									Se a pessoa é sedentária (pouco ou nenhum exercício), o fator
+									de atividade é de 1,2
+								</li>
+								<li>
+									Se a pessoa é levemente ativa (exercício leve 1-3 vezes por
+									semana), o fator de atividade é de 1,375
+								</li>
+								<li>
+									Se a pessoa é moderadamente ativa (exercício moderado 3-5
+									vezes por semana), o fator de atividade é de 1,55
+								</li>
+								<li>
+									Se a pessoa é bastante ativa (exercício pesado 6-7 vezes por
+									semana), o fator de atividade é de 1,725
+								</li>
+								<li>
+									Se a pessoa é extremamente ativa (exercício muito pesado todos
+									os dias ou exercício pesado duas vezes por dia), o fator de
+									atividade é de 1,9
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="info">
+				<div class="info-desenvolvedor">
+					<p>© developed by Moises</p>
+				</div>
+
+				<div class="github-info">
+					<a href="https://github.com/MoisesssDev">
+						<img src="img/icons8-github.svg" alt=""
+					/></a>
+				</div>
+
+				<div class="linkedin-info">
+					<a href="https://www.linkedin.com/in/mois%C3%A9s-almeida-674435245/">
+						<img src="img/icons8-linkedin.svg" alt=""
+					/></a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="src/script.js"></script>
+	</body>
+</html>

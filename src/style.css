@@ -1,0 +1,220 @@
+:root {
+	/* --titulo-font-family: 'Kufam', sans-serif; */
+	--body-font-family: 'Cuprum', sans-serif;
+	--main-color-red: #a23131;
+	--main-color-white: #fbf9fa;
+	--text-color: #2b2024;
+}
+
+* {
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	font-family: var(--body-font-family);
+	color: var(--text-color);
+}
+html {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+	font-family: var(--body-font-family);
+}
+
+body {
+	/* background-color: var(--main-color-red); */
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+.container {
+	background-color: var(--main-color-white);
+	border-radius: 5rem;
+	display: flex;
+	width: 70%;
+	height: 85vh;
+	margin: auto;
+	margin-top: 4rem;
+	box-shadow: inset 0 0 2em #707075, 0 0 3em #333030;
+}
+
+.box-info {
+	border-radius: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 60%;
+	/* background-color: var(--main-color-white); */
+	/* box-shadow: inset 0 0 1em #707075, 0 0 3em #333030; */
+}
+
+.info-input {
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.info-input select {
+	font-size: 1.5rem;
+	padding: 1rem;
+	border-radius: 1.5rem;
+}
+
+.info-input input {
+	padding: 1.5rem;
+	font-size: 2rem;
+	border: 0;
+	border-bottom: 2px solid var(--text-color);
+	outline: 0;
+	transition: 0.5s ease-in-out;
+}
+
+button {
+	font-size: 1rem;
+	padding: 24px;
+	width: 20.5rem;
+	border-radius: 24px;
+	border-color: var(--main-color-red);
+	font-weight: 600;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+button:hover {
+	color: var(--main-color-white);
+	background-color: var(--main-color-red);
+
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
+	filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+.box-resultado {
+	border-radius: 2rem;
+	width: 40%;
+	background-image: url('../img/background-resultado.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	/* box-shadow: inset 0 0 1em #1a1919, 0 0 3em #500202; */
+}
+
+.resultado {
+	height: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.resultado h2,
+.resultado p,
+.resultado li {
+	color: var(--main-color-white);
+}
+
+.resultado ul {
+	list-style-type: none; /* remove o marcador padrão */
+}
+
+.resultado ul li::before {
+	content: ''; /* insere um conteúdo vazio antes de cada item da lista */
+	display: inline-block; /* exibe o conteúdo como um bloco inline */
+	width: 0.5em; /* define a largura do marcador */
+	height: 0.5em; /* define a altura do marcador */
+	margin-right: 0.5em; /* adiciona um espaçamento à direita do marcador */
+	background-color: var(
+		--main-color-white
+	); /* muda a cor de fundo do marcador */
+	border-radius: 50%; /* arredonda os cantos do marcador */
+}
+
+.resultado .nota li {
+	padding: 0.5rem 2rem;
+	width: 80%;
+	font-size: 0.7rem;
+}
+
+.resultado h2 {
+	font-weight: 100;
+	font-size: 3rem;
+}
+
+#resultado-kcal {
+	margin-top: 3rem;
+	font-weight: 700;
+	font-size: 3.4rem;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10rem;
+	margin-bottom: 8rem;
+}
+
+.info-desenvolvedor {
+	font-size: 14px;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+}
+
+.info-desenvolvedor p {
+	color: var(--text-color);
+}
+
+.info img {
+	width: 60px;
+	transition: all 1s;
+	cursor: pointer;
+}
+
+.info img:hover {
+	-webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
+	filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
+	transform: scale(1.2);
+}
+
+.github-info {
+	margin-top: 0.9rem;
+	display: flex;
+	justify-content: center;
+}
+
+.linkedin-info {
+	display: flex;
+	justify-content: center;
+}
+
+.info a em {
+	font-size: 1rem;
+	justify-content: center;
+}
+
+@media (max-width: 800px) {
+	.container {
+		flex-direction: column;
+		width: 90%;
+		height: 130vh;
+	}
+
+	.box-info {
+		width: 100%;
+	}
+
+	.box-info .sexo {
+		margin-top: 1.3rem;
+		margin-bottom: 0.7rem;
+	}
+
+	.box-resultado {
+		width: 100%;
+		height: 100%;
+	}
+}
